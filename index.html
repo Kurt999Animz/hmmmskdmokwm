@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <div class="left">
+      <div class="box">
+        <h2>STUDENT LIST</h2>
+        <ul id="studentList"></ul>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="box">
+        <h2>ADD / CREATE STUDENT</h2>
+        <form id="studentForm" autocomplete="off">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" type="text" placeholder="e.g. Hatsune Miku" required />
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <input id="age" type="number" min="1" placeholder="16" required />
+          </div>
+
+          <div class="field">
+            <label for="club">Club</label>
+            <input id="club" type="text" placeholder="e.g. Art Club" required />
+          </div>
+
+          <div class="field">
+            <label for="picFile">Upload Picture</label>
+            <input id="picFile" type="file" accept="image/*" />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn add">Add Student</button>
+            <button type="button" id="clearForm" class="btn clear">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="box">
+        <h2>STUDENT DETAILS</h2>
+        <div id="details">
+          <div style="color:#9a9a9a">Click a student from the list to display their ID card here.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="previewCard" class="preview-card">
+    <div class="preview-inner">
+      <div class="pic"><img src="" alt=""></div>
+      <div class="pmeta">
+        <div class="pn">Name</div>
+        <div class="pd">Age • Club</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
